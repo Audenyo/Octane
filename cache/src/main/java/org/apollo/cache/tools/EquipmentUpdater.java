@@ -31,7 +31,7 @@ public final class EquipmentUpdater {
 		String release = args[0];
 
 		try (DataOutputStream os = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("data/equipment-" + release + ".dat")));
-			IndexedFileSystem fs = new IndexedFileSystem(Paths.get("data/fs/", release), true)) {
+			IndexedFileSystem fs = new IndexedFileSystem(Paths.get("game/data/fs/", release), true)) {
 			ItemDefinitionDecoder decoder = new ItemDefinitionDecoder(fs);
 			decoder.run();
 
